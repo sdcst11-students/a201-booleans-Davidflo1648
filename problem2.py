@@ -10,3 +10,9 @@
 # Outputs:
 # "the number is an integer"
 # "the number is not an integer"
+
+def check_integer(number):
+    if isinstance(number, int):
+        print("The number is an integer")
+    else:
+        print("The number is not an integer")

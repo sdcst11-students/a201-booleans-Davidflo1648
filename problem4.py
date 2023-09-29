@@ -33,3 +33,19 @@ that is an obtuse triangle
 
 
 """
+
+a = float(input("Enter the first side length: "))
+b = float(input("Enter the second side length: "))
+c = float(input("Enter the third side length: "))
+
+# Sort the side lengths in ascending order
+a, b, c = sorted([a, b, c])
+
+# Check if a^2 + b^2 is approximately equal to c^2
+is_right_triangle = abs((a ** 2 + b ** 2) - c ** 2) < 0.1
+
+if is_right_triangle:
+    print("The values represent a right triangle.")
+else:
+    print("The values do not form a right triangle.")
+

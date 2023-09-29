@@ -18,3 +18,14 @@ the sentence does not contain password
 Enter a sentence: The best password is no password.
 the sentence contains password
 """
+
+def check_password(sentence):
+    if "password" in sentence:
+        return "The sentence contains password"
+    else:
+        return "The sentence does not contain password"
+
+# Example usage
+user_input = input("Enter a sentence: ")
+result = check_password(user_input)
+print(result)
