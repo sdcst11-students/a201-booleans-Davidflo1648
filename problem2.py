@@ -11,8 +11,14 @@
 # "the number is an integer"
 # "the number is not an integer"
 
-def check_integer(number):
-    if isinstance(number, int):
-        print("The number is an integer")
-    else:
-        print("The number is not an integer")
+
+numb = input("Enter a number: ")
+
+try:
+    number = int(numb)
+    print(f"{number} is an integer.")
+except ValueError:
+    print(f"{numb} is not an integer.")
+
+
+

@@ -25,7 +25,6 @@ def check_password(sentence):
     else:
         return "The sentence does not contain password"
 
-# Example usage
 user_input = input("Enter a sentence: ")
 result = check_password(user_input)
 print(result)

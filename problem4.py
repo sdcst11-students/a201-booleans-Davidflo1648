@@ -33,19 +33,34 @@ that is an obtuse triangle
 
 
 """
+import math
 
 a = float(input("Enter the first side length: "))
 b = float(input("Enter the second side length: "))
 c = float(input("Enter the third side length: "))
 
-# Sort the side lengths in ascending order
-a, b, c = sorted([a, b, c])
+def classify_triangle(a, b, c):
+    # Calculate the squares of side lengths
+    a_squared = a ** 2
+    b_squared = b ** 2
+    c_squared = c ** 2
+    
+    # Check for right-angled triangle
+    if a_squared + b_squared == c_squared or \
+       b_squared + c_squared == a_squared or \
+       c_squared + a_squared == b_squared:
+        return "a right triangle"
+    
+    
+    elif a_squared + b_squared > c_squared and \
+         b_squared + c_squared > a_squared and \
+         c_squared + a_squared > b_squared:
+        return "an acute triangle"
+    
+    # Otherwise, it's an obtuse-angled triangle
+    else:
+        return "an obtuse triangle"
 
-# Check if a^2 + b^2 is approximately equal to c^2
-is_right_triangle = abs((a ** 2 + b ** 2) - c ** 2) < 0.1
-
-if is_right_triangle:
-    print("The values represent a right triangle.")
-else:
-    print("The values do not form a right triangle.")
-
+# Classify the triangle
+result = classify_triangle(a, b, c)
+print(f"That is {result}")

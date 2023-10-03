@@ -24,7 +24,7 @@ number = float(input())
 
 if number > 100:
     print("The number is greater than 100.")
-if number < 100:
+elif number < 100:
     print("The number is not greater than 100.")
-if number==100:
+elif number==100:
     print("The number is 100.")
